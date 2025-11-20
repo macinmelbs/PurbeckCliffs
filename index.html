@@ -6,6 +6,18 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Availability scripts -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- FullCalendar -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+
+
+  <!-- ICS parser 
+  <script src="https://cdn.jsdelivr.net/npm/ical.js/dist/ical.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/ical.js@1.4.0/build/ical.min.js"></script>
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -166,7 +178,18 @@
     </ul>
   </div>
 </div>
-  
+<!-- Availability -->
+<div class="w3-container w3-padding-64" id="Availability">
+   <div class="w3-content" style="max-width:1100px">
+     <h2 class="w3-center">Availability</h2>
+    <p>Our current bookings are listed below in blue. We book in week blocks from Friday to Friday.</p>
+    <p>For <b>best deals, contact us direct</b> <a href="tel:+441929424352">Call Us: +44 (0) 1929 424352</a>.</p>
+    <p>Alternatively <b>Book Now</b> via <a href="https://www.simplyowners.net/holiday-cottages-swanage/p/256298/">Simply Owners</a></p>
+    <div id="calendar"></div>
+    <script src="assets/calendar.js"></script>
+  </div>
+</div>
+
 <!-- Map -->
 <div class="w3-container w3-padding-64" id="map">
   <h2 class="w3-center">Location</h2>
