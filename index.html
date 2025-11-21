@@ -150,6 +150,67 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
+    .review-strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  scroll-snap-type: x mandatory;
+}
+
+.review-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.review-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #fff;
+  text-decoration: none;
+  color: #333;
+  scroll-snap-align: start;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  white-space: nowrap;
+}
+
+.review-badge img {
+  height: 20px;
+  margin-left: 4px;
+}
+
+/* Call button */
+.call-badge {
+  background: #ff9800;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* Stayz */
+.stayz-badge {
+  background: #4CAF50;
+  color: #fff !important;
+}
+
+.stayz-badge .score {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Simply Owners */
+.owners-badge .stars {
+  color: gold;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
   </style>
 </head>
 
@@ -177,18 +238,25 @@
     <p class="w3-large">Luxury Apartment with Indoor Pool in Swanage</p>
   </div>
 </div>
-<!-- Scrolling Action Bar -->
-<div class="w3-bar w3-padding w3-white" style="overflow-x:auto; white-space:nowrap; display:flex; gap:10px; justify-content:center; align-items:center; border-top:1px solid #ccc; border-bottom:1px solid #ccc">
-  <a href="tel:+441929424352" class="w3-button" style="background-color:#ff9800; color:white; min-width:250px;">
-    <span class="material-icons">call</span> Call Sue for best deals
+<!-- REview Strip -->
+<div class="review-strip">
+  
+  <a href="tel:+441929424352" class="review-badge call-badge">
+    <span class="material-icons">call</span>
+    Call Sue for best deals
   </a>
-  <a href="https://www.stayz.com.au/holiday-rental/p8148021" target="_blank" class="w3-button" style="background-color:#4CAF50; color:white; min-width:180px;">
-    <b>9.8</b> Exceptional <img src="images/stayz-logo.png" alt="Stayz" style="height:20px; vertical-align:middle; margin-left:5px">
+
+  <a href="https://www.stayz.com.au/holiday-rental/p8148021" target="_blank" class="review-badge stayz-badge">
+    <span class="score">9.8</span>
+    <span class="label">Exceptional</span>
+    <img src="images/stayz-logo.png" alt="Stayz">
   </a>
-  <a href="https://www.simplyowners.net/holiday-cottages-swanage/p/256298/" target="_blank" class="w3-button w3-white w3-border" style="min-width:220px;">
-    <span style="color:gold">★★★★★</span>
-    <img src="images/simply-owners-logo.png" alt="Simply Owners" style="height:20px; vertical-align:middle; margin-left:5px">
+
+  <a href="https://www.simplyowners.net/holiday-cottages-swanage/p/256298/" target="_blank" class="review-badge owners-badge">
+    <span class="stars">★★★★★</span>
+    <img src="images/simply-owners-logo.png" alt="Simply Owners">
   </a>
+
 </div>
 <!-- About -->
 <div class="w3-content w3-padding" style="max-width:1100px">
