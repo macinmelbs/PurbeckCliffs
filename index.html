@@ -130,22 +130,43 @@
     .w3-top {
       z-index: 9999;
     }
+
+    /* Enable horizontal scrolling */
+    .nav-scroll {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    /* Prevent wrapping and keep items in one line */
+    .nav-nowrap .w3-bar-item {
+      display: inline-block;
+    }
+
+    /* Optional: hide ugly scrollbar on mobile */
+    .nav-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .nav-scroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   </style>
 </head>
 
 <body id="home">
 
 <!-- Top Navigation -->
-<div class="w3-top w3-bar w3-white w3-card">
-  <a href="#home" class="w3-bar-item w3-button">Home</a>
-  <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
-  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-  <a href="#map" class="w3-bar-item w3-button">Map</a>
-  <a href="#Availability" class="w3-bar-item w3-button">Availability</a>
-  <a href="https://www.simplyowners.net/holiday-cottages-swanage/p/256298/" class="w3-bar-item w3-button">Simply Owners</a>
-  <a href="tel:+441929424352" class="w3-bar-item w3-button w3-white w3-border w3-border-red w3-round-large">Call for best deals: +44 (0) 1929 424352</a>
+<div class="nav-scroll"></div>
+  <div class="w3-top w3-bar w3-white w3-card">
+    <a href="#home" class="w3-bar-item w3-button">Home</a>
+    <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#map" class="w3-bar-item w3-button">Map</a>
+    <a href="#Availability" class="w3-bar-item w3-button">Availability</a>
+    <a href="tel:+441929424352" class="w3-bar-item w3-button w3-white w3-border w3-border-red w3-round-large">Call for best deals: +44 (0) 1929 424352</a>
+    <a href="https://www.simplyowners.net/holiday-cottages-swanage/p/256298/" class="w3-bar-item w3-button">Book Online - Simply Owners</a>
+  </div>
 </div>
-
 <!-- Hero with Video and Fallback Background -->
 <div class="hero-container">
   <video autoplay muted loop playsinline>
